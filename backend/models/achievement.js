@@ -1,37 +1,10 @@
 var mongoose = require("mongoose");
 
-var testSchema = mongoose.Schema({
-	name: String,
-	confDate: String,
-    confDuration: String,
-	condLocation: String,
-	confDonate: String,
-	confProgram: String,
-	opinion: String,
-	
-	conf: {
-        id: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "Conf"
-        },
-        name: String
-    },
-	
-	confOwner: {
-        id: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User"
-        },
-        username: String
-    },
-	
-    sender: {
-        id: {
-            type: mongoose.Schema.Types.ObjectId,
-            ref: "User"
-        },
-        username: String
-    }
+var achievementSchema = mongoose.Schema({
+	title: String,
+	image: String,
+    descrtiption: String,
+	value: Number
 });
 
-module.exports = mongoose.model("Test", testSchema);
+module.exports = mongoose.model("Achievement", achievementSchema);
