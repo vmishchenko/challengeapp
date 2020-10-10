@@ -40,36 +40,35 @@ const useStyles = makeStyles((theme) => ({
 
 const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
-const TasksList = () => {
+const GoalsList = () => {
   const classes = useStyles();
   return (
     <>
       <div className={classes.heroContent}>
         <Container maxWidth="sm">
           <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            Album layout
+            Популярные цели
           </Typography>
           <Typography variant="h5" align="center" color="textSecondary" paragraph>
-            Something short and leading about the collection below—its contents, the creator, etc.
-            Make it short and sweet, but not too short so folks don&apos;t simply skip over it
-            entirely.
+           Начни с простых целей чтобы сделать свою жизнь ярче
           </Typography>
           <div className={classes.heroButtons}>
             <Grid container spacing={2} justify="center">
               <Grid item>
                 <Button variant="contained" color="primary">
-                  Main call to action
+                  Выбрать цели
                 </Button>
               </Grid>
               <Grid item>
                 <Button variant="outlined" color="primary">
-                  Secondary action
+                  Добавить свою
                 </Button>
               </Grid>
             </Grid>
           </div>
         </Container>
       </div>
+
       <Container className={classes.cardGrid} maxWidth="md">
         <Grid container spacing={4}>
           {cards.map((card) => (
@@ -82,18 +81,18 @@ const TasksList = () => {
                 />
                 <CardContent className={classes.cardContent}>
                   <Typography gutterBottom variant="h5" component="h2">
-                    Heading
+                    Здоровый сон
                   </Typography>
                   <Typography>
-                    This is a media card. You can use this section to describe the content.
+                    Хороший сон -- необходимое условие здоровой и продуктивной жизни
                   </Typography>
                 </CardContent>
                 <CardActions>
                   <Button size="small" color="primary">
-                    View
+                    Добавить
                   </Button>
                   <Button size="small" color="primary">
-                    Edit
+                    Посмотреть
                   </Button>
                 </CardActions>
               </Card>
@@ -105,4 +104,4 @@ const TasksList = () => {
   );
 };
 
-export default TasksList;
+export default GoalsList;

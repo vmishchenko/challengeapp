@@ -1,11 +1,14 @@
 import Profile from "../components/Profile";
 import Home from "../components/Home";
-import TasksList from "../components/TasksList";
+import GoalsList from "../components/GoalsList";
+
+import SignIn from "../components/user/SignIn";
+import SignUp from "../components/user/SignUp";
 
 const pages = [
   {
     path: '/',
-    component: Home,
+    component: GoalsList,
     exact: true,
   },
   {
@@ -14,8 +17,18 @@ const pages = [
     exact: false,
   },
   {
-    path: '/tasks',
-    component: TasksList,
+    path: '/goals',
+    component: GoalsList,
+    exact: false,
+  },
+  {
+    path: '/sign-in',
+    component: SignIn,
+    exact: false,
+  },
+  {
+    path: '/sign-up',
+    component: SignUp,
     exact: false,
   },
 ];
