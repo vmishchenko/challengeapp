@@ -45,6 +45,6 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use("/", indexRoutes);
 
-app.listen(port, function(){
+app.listen(PORT, function(){
 	console.log(`server started on port ${PORT}`);
 });
