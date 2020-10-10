@@ -4,3 +4,6 @@
 .idea
 ./frontend/node_modules
 ./frontend/
+
+#back-end
+./backend/node_modules
