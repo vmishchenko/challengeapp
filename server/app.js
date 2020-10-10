@@ -1,6 +1,7 @@
 const 	express     	= require("express"),
+		path = require('path'),
 	    app         	= express(),
-	    mongoose    	= require("mongoose"),
+	    mongoose    	= require('mongoose'),
 		passport    	= require("passport"),
     	LocalStrategy 	= require("passport-local"),
 	  	methodOverride 	= require("method-override"),
