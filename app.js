@@ -12,7 +12,7 @@ const 	express     	= require("express"),
 
 const	indexRoutes    	= require("./routes/index");
 
-const dbUrl = process.env.DATABASEURL || "mongodb://localhost:27017/chall_db";
+const dbUrl = "mongodb+srv://dbuser1:topcodeR37@Cluster0.vvlrr.mongodb.net/cluster0?retryWrites=true&w=majority"
 
 mongoose.connect(dbUrl, { 
 	useUnifiedTopology: true,                         
