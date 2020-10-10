@@ -1,6 +1,6 @@
 import Profile from "../components/Profile";
 import Home from "../components/Home";
-import Tasks from "../components/Tasks";
+import TasksList from "../components/TasksList";
 
 const pages = [
   {
@@ -15,7 +15,7 @@ const pages = [
   },
   {
     path: '/tasks',
-    component: Tasks,
+    component: TasksList,
     exact: false,
   },
 ];
