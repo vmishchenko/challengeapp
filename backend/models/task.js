@@ -1,6 +1,6 @@
 var mongoose = require("mongoose");
 
-var confSchema = new mongoose.Schema({
+var taskSchema = new mongoose.Schema({
 	// Main info
 	image: String,
 	name: String,
@@ -39,4 +39,4 @@ var confSchema = new mongoose.Schema({
    	],
 });
 
-module.exports = mongoose.model("Conf", confSchema);
+module.exports = mongoose.model("Task", taskSchema);
