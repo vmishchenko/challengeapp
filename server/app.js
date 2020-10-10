@@ -14,7 +14,10 @@ const	indexRoutes    	= require("../routes");
 
 const dbUrl = "mongodb+srv://dbuser1:topcodeR37@Cluster0.vvlrr.mongodb.net/cluster0?retryWrites=true&w=majority"
 
-var port = process.env.PORT || 8080;
+const buildPath = path.join(__dirname, '..', 'build');
+app.use(express.static(buildPath));
+
+const PORT = process.env.PORT || 5000;
 
 mongoose.connect(dbUrl, { 
 	useUnifiedTopology: true,                         
@@ -42,5 +45,5 @@ passport.deserializeUser(User.deserializeUser());
 app.use("/", indexRoutes);
 
 app.listen(port, function(){
-	console.log('App successfully has started');
+	console.log(`server started on port ${PORT}`);
 });
