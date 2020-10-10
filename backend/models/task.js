@@ -4,9 +4,9 @@ var tasksSchema = new mongoose.Schema({
 	title: String,
 	startDate: Date,
 	endDate: Date,
-	valuePoint: Int32Array,
+	valuePoint: Number,
 	type: String,
-	userId: Int32Array
+	userId: Number
 });
 
 module.exports = mongoose.model("Tasks", tasksSchema);
