@@ -7,7 +7,7 @@ var UserSchema = new mongoose.Schema({
     email: String,
     password: String,
     vipStatus: Boolean,
-    value: Int32Array
+    value: Number
 });
 
 UserSchema.plugin(passportLocalMongoose)
