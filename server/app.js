@@ -4,13 +4,13 @@ const 	express     	= require("express"),
 		passport    	= require("passport"),
     	LocalStrategy 	= require("passport-local"),
 	  	methodOverride 	= require("method-override"),
-	  	Achievement  	= require("./models/achievement"),
-    	Task     		= require("./models/task"),
-    	User        	= require("./models/user");
+	  	Achievement  	= require("../models/achievement"),
+    	Task     		= require("../models/task"),
+    	User        	= require("../models/user");
     
 //requiring routes
 
-const	indexRoutes    	= require("./routes/index");
+const	indexRoutes    	= require("../routes");
 
 const dbUrl = "mongodb+srv://dbuser1:topcodeR37@Cluster0.vvlrr.mongodb.net/cluster0?retryWrites=true&w=majority"
 
