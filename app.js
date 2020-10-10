@@ -14,6 +14,8 @@ const	indexRoutes    	= require("./routes/index");
 
 const dbUrl = "mongodb+srv://dbuser1:topcodeR37@Cluster0.vvlrr.mongodb.net/cluster0?retryWrites=true&w=majority"
 
+var port = process.env.PORT || 8080;
+
 mongoose.connect(dbUrl, { 
 	useUnifiedTopology: true,                         
 	useNewUrlParser: true,                            
@@ -39,6 +41,6 @@ passport.deserializeUser(User.deserializeUser());
 
 app.use("/", indexRoutes);
 
-app.listen(8080, function(){
+app.listen(port, function(){
 	console.log('App successfully has started');
 });
