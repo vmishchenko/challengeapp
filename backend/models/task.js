@@ -1,42 +1,12 @@
 var mongoose = require("mongoose");
-
-var taskSchema = new mongoose.Schema({
-	// Main info
-	image: String,
-	name: String,
-	website: String,
-	// Date & Place
-	beginDate: String,
-	endDate: String,
-	deadlineForDocs: String,
-	location: String,
-	// Contacts
-	contactPerson: String,
-	orgEmailAdress: String,
-	//Additional Info
-	orgBy: String,
-	topics: String,
-	linkToExample: String,   
-   	description: String,
-   	author: {
-      	id: {
-         	type: mongoose.Schema.Types.ObjectId,
-         	ref: "User"
-      	},
-      	username: String
-   	},
-   	participants: [
-      	{
-         	type: mongoose.Schema.Types.ObjectId,
-         	ref: "Participant"
-      	}
-   	],
-	testResults: [
-      	{
-         	type: mongoose.Schema.Types.ObjectId,
-         	ref: "Test"
-      	}
-   	],
+		  
+var tasksSchema = new mongoose.Schema({
+	title: String,
+	startDate: Date,
+	endDate: Date,
+	valuePoint: Int32Array,
+	type: String,
+	userId: Int32Array
 });
 
-module.exports = mongoose.model("Task", taskSchema);
+module.exports = mongoose.model("Tasks", tasksSchema);

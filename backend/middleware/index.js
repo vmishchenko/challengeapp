@@ -8,4 +8,11 @@ middlewareObj.isLoggedIn = function(req, res, next){
     res.send("false");
 }
 
+middlewareObj.isUser = function(req, res, next){
+    if(req.isAuthenticated()){
+        return next();
+    }
+    res.send("false");
+}
+
 module.exports = middlewareObj;
