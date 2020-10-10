@@ -1,4 +1,4 @@
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 var achievementSchema = mongoose.Schema({
 	title: String,
