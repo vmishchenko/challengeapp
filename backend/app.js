@@ -22,6 +22,6 @@ app.get("/",function(req,res){
 	res.send("Main page here");
 })
 
-app.listen(3000, function(){
+app.listen(8080, function(){
 	console.log('App successfully has started');
 });
