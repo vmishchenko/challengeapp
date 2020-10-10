@@ -1,6 +1,6 @@
-
-
 #front-end
 .idea
-./frontend/node_modules
-./frontend/
+frontend/node_modules
+
+#back-end
+backend/node_modules
