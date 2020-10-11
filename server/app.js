@@ -7,7 +7,9 @@ const 	express     	= require("express"),
 	  	methodOverride 	= require("method-override"),
 	  	Achievement  	= require("../models/achievement"),
     	Task     		= require("../models/task"),
-    	User        	= require("../models/user");
+    	User        	= require("../models/user"),
+		UserHistory     = require("../models/user_history"),
+		UserAchievement = require("../models/users_achievement");
     
 //requiring routes
 
