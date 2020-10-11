@@ -46,7 +46,7 @@ router.get("/logout", function(req, res){
 // Api data
 router.get('/api/get/userbyid', async (req,res) => {
     const User = mongoose.model('Users');
-    let users = await User.find();
+    //let users = await User.find();
     User.find({}, function(err, data){
         console.log('data');
         console.log(data);
@@ -54,7 +54,7 @@ router.get('/api/get/userbyid', async (req,res) => {
     });
     //return res.status(200).send(products);
     var list = ["item1", "item2", "item3"];
-    res.json(users);
+    res.json(data);
     //console.log('Sent list of items');
 });
 router.get('/api/get/usertasks', (req,res) => {
