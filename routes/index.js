@@ -47,6 +47,11 @@ router.get("/logout", function(req, res){
 router.get('/api/get/userbyid', async (req,res) => {
     const User = mongoose.model('Users');
     let users = await User.find();
+    User.find({}, function(err, data){
+        console.log('data');
+        console.log(data);
+        console.log(err);
+    });
     //return res.status(200).send(products);
     var list = ["item1", "item2", "item3"];
     res.json(users);
