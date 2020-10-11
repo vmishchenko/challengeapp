@@ -68,8 +68,8 @@ app.get('*', function(req, res) {
 	res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-app.post('/', function (req, res) {
-	res.send({ key: 'POST request to the homepage'});
+app.get("/", (req, res) => {
+	res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 app.listen(PORT, function(){
