@@ -15,9 +15,6 @@ const	indexRoutes    	= require("../routes");
 
 const dbUrl = "mongodb+srv://dbuser1:topcodeR37@Cluster0.vvlrr.mongodb.net/cluster0?retryWrites=true&w=majority"
 
-const buildPath = path.join(__dirname, '..', 'src');
-app.use(express.static(buildPath));
-
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(dbUrl, { 
