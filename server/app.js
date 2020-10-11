@@ -43,9 +43,12 @@ passport.deserializeUser(User.deserializeUser());
 app.use(express.static(path.join(__dirname, "..", "build")));
 app.use(express.static("public"));
 
-app.get('/api/get/userbyid', (req,res) => {
+app.get('/api/get/userbyid', async (req,res) => {
+    const User = mongoose.model('users');
+    let users = await User.find();
+    //return res.status(200).send(products);
 	var list = ["item1", "item2", "item3"];
-	res.json(list);
+	res.json(users);
 	//console.log('Sent list of items');
 });
 app.get('/api/get/usertasks', (req,res) => {
