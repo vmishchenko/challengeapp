@@ -40,6 +40,9 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+app.use(express.static(path.join(__dirname, "..", "build")));
+app.use(express.static("public"));
+
 app.get('/api/get/userbyid', (req,res) => {
 	var list = ["item1", "item2", "item3"];
 	res.json(list);
@@ -63,7 +66,6 @@ app.get('/api/get/allachievement', (req,res) => {
 
 app.use("/", indexRoutes);
 
-app.use(express.static(path.join(__dirname, "..", "public")));
 //app.get('*', function(req, res) {
 //	res.sendFile(path.join(__dirname, '../public', 'index.html'));
 //});
