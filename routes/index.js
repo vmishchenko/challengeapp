@@ -3,7 +3,7 @@ var router  = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
 var Task = require("../models/task");
-var Achivement = require("../models/achivement");
+var Achivement = require("../models/achievement");
 var middleware = require("../middleware");
 
 //ckeck if User exists
