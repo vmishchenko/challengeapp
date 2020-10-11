@@ -3,17 +3,17 @@ var router  = express.Router();
 var passport = require("passport");
 var User = require("../models/user");
 var Task = require("../models/task");
-var Achivement = require("../models/achievement");
-// var middleware = require("../middleware");
+var Achivement = require("../models/achivement");
+var middleware = require("../middleware");
 
 //ckeck if User exists
-// router.post("/authenticate", middleware.isLoggedIn, function(req, res){
-// 		res.send("true");
-// });
-// //ckeck if User logged in
-// router.post("/authenticate/right", middleware.isLoggedIn, function(req, res){
-// 		res.send("true");
-// });
+router.post("/authenticate", middleware.isLoggedIn, function(req, res){
+    res.send("true");
+});
+//ckeck if User logged in
+router.post("/authenticate/right", middleware.isLoggedIn, function(req, res){
+    res.send("true");
+});
 
 //handle sign up logic
 router.post("/register", function(req, res){
@@ -23,13 +23,13 @@ router.post("/register", function(req, res){
             return res.send("false");
         }
         passport.authenticate("local")(req, res, function(){
-           res.send("true"); 
+            res.send("true");
         });
     });
 });
 
 //handling login logic
-router.post("/login", passport.authenticate("local", 
+router.post("/login", passport.authenticate("local",
     {
         successRedirect: "/",
         failureRedirect: "/login"
@@ -38,8 +38,8 @@ router.post("/login", passport.authenticate("local",
 
 // logout route / handling logout logic
 router.get("/logout", function(req, res){
-   req.logout();
-   res.send("true");
+    req.logout();
+    res.send("true");
 });
 
 module.exports = router;

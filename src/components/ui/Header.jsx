@@ -22,29 +22,29 @@ const useStyles = makeStyles((theme) => ({
 export default function Header() {
   const classes = useStyles();
   return (
-    <>
-      <CssBaseline />
-      <AppBar position="relative">
-        <Toolbar>
-          <Link href="/" variant="body2" className={classes.link}>
-            <AccessAlarm className={classes.icon} />
-            <Typography variant="h6" color="inherit" noWrap>
-              Challenge
-            </Typography>
-          </Link>
+      <>
+        <CssBaseline />
+        <AppBar position="relative">
+          <Toolbar>
+            <Link href="/" variant="body2" className={classes.link}>
+              <AccessAlarm className={classes.icon} />
+              <Typography variant="h6" color="inherit" noWrap>
+                Challenge
+              </Typography>
+            </Link>
 
-          <Link href="/sign-in" >
-            <Button variant="outlined">
-              Sign in
-            </Button>
-          </Link>
-          <Link href="/sign-up" >
-            <Button variant="outlined" color="secondary">
-              Sign up
-            </Button>
-          </Link>
-        </Toolbar>
-      </AppBar>
-    </>
+            <Link href="/sign-in" >
+              <Button variant="outlined">
+                Sign in
+              </Button>
+            </Link>
+            <Link href="/sign-up" >
+              <Button variant="outlined" color="secondary">
+                Sign up
+              </Button>
+            </Link>
+          </Toolbar>
+        </AppBar>
+      </>
   );
 }

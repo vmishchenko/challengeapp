@@ -7,14 +7,14 @@ import Footer from "./components/ui/Footer";
 
 function App() {
   return (
-    <Router>
+      <Router>
       <Header />
       <main>
-        <Routes />
+      <Routes />
       </main>
       <Footer />
-    </Router>
-  );
+      </Router>
+);
 }
 
 export default App;

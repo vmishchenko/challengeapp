@@ -1,9 +1,9 @@
-var mongoose = require('mongoose');
+var mongoose = require("mongoose");
 
 var achievementSchema = mongoose.Schema({
 	title: String,
 	image: String,
-    descrtiption: String,
+	description: String,
 	value: Number
 });
 

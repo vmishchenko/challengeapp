@@ -43,65 +43,64 @@ const cards = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const GoalsList = () => {
   const classes = useStyles();
   return (
-    <>
-      <div className={classes.heroContent}>
-        <Container maxWidth="sm">
-          <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
-            Популярные цели
-          </Typography>
-          <Typography variant="h5" align="center" color="textSecondary" paragraph>
-           Начни с простых целей чтобы сделать свою жизнь ярче
-          </Typography>
-          <div className={classes.heroButtons}>
-            <Grid container spacing={2} justify="center">
-              <Grid item>
-                <Button variant="contained" color="primary">
-                  Выбрать цели
-                </Button>
+      <>
+        <div className={classes.heroContent}>
+          <Container maxWidth="sm">
+            <Typography component="h1" variant="h2" align="center" color="textPrimary" gutterBottom>
+              Популярные цели
+            </Typography>
+            <Typography variant="h5" align="center" color="textSecondary" paragraph>
+              Начни с простых целей чтобы сделать свою жизнь ярче
+            </Typography>
+            <div className={classes.heroButtons}>
+              <Grid container spacing={2} justify="center">
+                <Grid item>
+                  <Button variant="contained" color="primary">
+                    Выбрать цели
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button variant="outlined" color="primary">
+                    Добавить свою
+                  </Button>
+                </Grid>
               </Grid>
-              <Grid item>
-                <Button variant="outlined" color="primary">
-                  Добавить свою
-                </Button>
-              </Grid>
-            </Grid>
-          </div>
-        </Container>
-      </div>
+            </div>
+          </Container>
+        </div>
 
-      <Container className={classes.cardGrid} maxWidth="md">
-        <Grid container spacing={4}>
-          {cards.map((card) => (
-            <Grid item key={card} xs={12} sm={6} md={4}>
-              <Card className={classes.card}>
-                <CardMedia
-                  className={classes.cardMedia}
-                  image="https://source.unsplash.com/random"
-                  title="Image title"
-                />
-                <CardContent className={classes.cardContent}>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    Здоровый сон
-                  </Typography>
-                  <Typography>
-                    Хороший сон -- необходимое условие здоровой и продуктивной жизни
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small" color="primary">
-                    Добавить
-                  </Button>
-                  <Button size="small" color="primary">
-                    Посмотреть
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
-    </>
+        <Container className={classes.cardGrid} maxWidth="md">
+          <Grid container spacing={4}>
+            {cards.map((card) => (
+                <Grid item key={card} xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardMedia
+                        className={classes.cardMedia}
+                        image="https://source.unsplash.com/random"
+                        title="Image title"
+                    />
+                    <CardContent className={classes.cardContent}>
+                      <Typography gutterBottom variant="h5" component="h2">
+                        Здоровый сон
+                      </Typography>
+                      <Typography>
+                        Хороший сон -- необходимое условие здоровой и продуктивной жизни
+                      </Typography>
+                    </CardContent>
+                    <CardActions>
+                      <Button size="small" color="primary">
+                        Добавить
+                      </Button>
+                      <Button size="small" color="primary">
+                        Посмотреть
+                      </Button>
+                    </CardActions>
+                  </Card>
+                </Grid>
+            ))}
+          </Grid>
+        </Container>
+      </>
   );
 };
-
 export default GoalsList;
