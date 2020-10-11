@@ -44,7 +44,7 @@ app.use(express.static(path.join(__dirname, "..", "build")));
 app.use(express.static("public"));
 
 app.get('/api/get/userbyid', async (req,res) => {
-    const User = mongoose.model('users');
+    const User = mongoose.model('Users');
     let users = await User.find();
     //return res.status(200).send(products);
 	var list = ["item1", "item2", "item3"];
