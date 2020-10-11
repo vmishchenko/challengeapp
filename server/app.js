@@ -13,7 +13,7 @@ const 	express     	= require("express"),
 
 const	indexRoutes    	= require("../routes");
 
-const dbUrl = "mongodb+srv://dbuser1:topcodeR37@Cluster0.vvlrr.mongodb.net/cluster0?retryWrites=true&w=majority"
+const dbUrl = "mongodb+srv://dbuser1:topcodeR37@Cluster0.vvlrr.mongodb.net/icando?retryWrites=true&w=majority"
 
 const PORT = process.env.PORT || 5000;
 
