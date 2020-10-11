@@ -43,10 +43,10 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.use("/", indexRoutes);
-
 app.use(express.static(path.join(__dirname, 'public')));
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'public/index.html')));
+
+app.use("/", indexRoutes);
 
 app.listen(PORT, function(){
 	console.log(`server started on port ${PORT}`);
