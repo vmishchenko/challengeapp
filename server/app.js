@@ -40,15 +40,30 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-app.get('/api/getList', (req,res) => {
+app.get('/api/get/userbyid', (req,res) => {
 	var list = ["item1", "item2", "item3"];
 	res.json(list);
-	console.log('Sent list of items');
+	//console.log('Sent list of items');
+});
+app.get('/api/get/usertasks', (req,res) => {
+	var list = ["item1", "item2", "item3"];
+	res.json(list);
+	//console.log('Sent list of items');
+});
+app.get('/api/get/userachievements', (req,res) => {
+	var list = ["item1", "item2", "item3"];
+	res.json(list);
+	//console.log('Sent list of items');
+});
+app.get('/api/get/allachievement', (req,res) => {
+	var list = ["item1", "item2", "item3"];
+	res.json(list);
+	//console.log('Sent list of items');
 });
 
 app.use("/", indexRoutes);
 
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '../public')));
 app.get('*', (req, res) => res.sendFile(path.join(__dirname, '../public/index.html')));
 
 app.listen(PORT, function(){
