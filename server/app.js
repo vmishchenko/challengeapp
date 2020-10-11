@@ -43,31 +43,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use(express.static(path.join(__dirname, "..", "build")));
 app.use(express.static("public"));
 
-app.get('/api/get/userbyid', async (req,res) => {
-    const User = mongoose.model('Users');
-    let users = await User.find();
-    //return res.status(200).send(products);
-	var list = ["item1", "item2", "item3"];
-	res.json(users);
-	//console.log('Sent list of items');
-});
-app.get('/api/get/usertasks', (req,res) => {
-	var list = ["item1", "item2", "item3"];
-	res.json(list);
-	//console.log('Sent list of items');
-});
-app.get('/api/get/userachievements', (req,res) => {
-	var list = ["item1", "item2", "item3"];
-	res.json(list);
-	//console.log('Sent list of items');
-});
-
-
 app.use("/", indexRoutes);
-
-//app.get('*', function(req, res) {
-//	res.sendFile(path.join(__dirname, '../public', 'index.html'));
-//});
 
 app.listen(PORT, function(){
 	console.log(`server started on port ${PORT}`);

@@ -1,6 +1,7 @@
 var express = require("express");
 var router  = express.Router();
 var passport = require("passport");
+var mongoose = require('mongoose');
 var User = require("../models/user");
 var Task = require("../models/task");
 var Achivement = require("../models/achievement");
@@ -42,6 +43,25 @@ router.get("/logout", function(req, res){
     res.send("true");
 });
 
+// Api data
+router.get('/api/get/userbyid', async (req,res) => {
+    const User = mongoose.model('Users');
+    let users = await User.find();
+    //return res.status(200).send(products);
+    var list = ["item1", "item2", "item3"];
+    res.json(users);
+    //console.log('Sent list of items');
+});
+router.get('/api/get/usertasks', (req,res) => {
+    var list = ["item1", "item2", "item3"];
+    res.json(list);
+    //console.log('Sent list of items');
+});
+router.get('/api/get/userachievements', (req,res) => {
+    var list = ["item1", "item2", "item3"];
+    res.json(list);
+    //console.log('Sent list of items');
+});
 router.get('/api/get/allachievement', (req,res) => {
     var list = ["item1", "item2", "item3"];
     res.json(list);
