@@ -61,11 +61,7 @@ app.get('/api/get/userachievements', (req,res) => {
 	res.json(list);
 	//console.log('Sent list of items');
 });
-app.get('/api/get/allachievement', (req,res) => {
-	var list = ["item1", "item2", "item3"];
-	res.json(list);
-	//console.log('Sent list of items');
-});
+
 
 app.use("/", indexRoutes);
 

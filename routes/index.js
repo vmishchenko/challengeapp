@@ -42,4 +42,10 @@ router.get("/logout", function(req, res){
     res.send("true");
 });
 
+router.get('/api/get/allachievement', (req,res) => {
+    var list = ["item1", "item2", "item3"];
+    res.json(list);
+    //console.log('Sent list of items');
+});
+
 module.exports = router;
